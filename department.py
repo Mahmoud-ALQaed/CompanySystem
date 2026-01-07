@@ -14,8 +14,7 @@ class Department:
 
     @name.setter
     def name(self, value):
-        if value:
-            self._name = value
+        self._name = value
 
     @property
     def employees(self):
