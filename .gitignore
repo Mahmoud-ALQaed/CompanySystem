@@ -1,2 +1,28 @@
+# Python bytecode (الملفات المؤقتة للبايثون)
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+
+# Virtual Environments (البيئة الافتراضية)
+venv/
+env/
+ENV/
+.env
+
+# VS Code settings (إعدادات المحرر)
+.vscode/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# OS generated files (ملفات النظام المؤقتة)
+.DS_Store
+Thumbs.db
