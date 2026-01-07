@@ -20,8 +20,7 @@ class Employee(ABC):
 
     @name.setter
     def name(self, value):
-        if value:
-            self._name = value
+        self._name = value
 
     @property
     def age(self):
@@ -29,8 +28,7 @@ class Employee(ABC):
 
     @age.setter
     def age(self, value):
-        if value > 0:
-            self._age = value
+        self._age = value
 
     @property
     def salary(self):
@@ -38,8 +36,7 @@ class Employee(ABC):
 
     @salary.setter
     def salary(self, value):
-        if value > 0:
-            self._salary = value
+        self._salary = value
 
     @property
     def employee_type(self):
@@ -76,8 +73,7 @@ class Manager(Employee):
 
     @bonus.setter
     def bonus(self, value):
-        if value >= 0:
-            self._bonus = value
+        self._bonus = value
 
     def calculate_salary(self):
         return self._salary + self._bonus
