@@ -1,9 +1,9 @@
 from company_system import CompanySystem
-
+from enums import EmployeeType
 
 def main():
     system = CompanySystem()
-
+    print("Welcome to the company management system")
     while True:
         print("""
 1. Add Department
@@ -18,6 +18,8 @@ def main():
 10. Delete Department
 11. Show Departments with Employees
 12. Calculate Salary for Employee
+13. Edit employee
+14. edit_department             
 0. Exit
 """)
         choice = input("Choose: ")
@@ -25,9 +27,9 @@ def main():
         if choice == "1":
             system.add_department()
         elif choice == "2":
-            system.add_employee("worker")
+            system.add_employee(EmployeeType.WORKER)
         elif choice == "3":
-            system.add_employee("manager")
+            system.add_employee(EmployeeType.MANAGER)
         elif choice == "4":
             system.show_employee()
         elif choice == "5":
@@ -46,6 +48,10 @@ def main():
             system.show_departments_with_employees()
         elif choice == "12":
             system.calculate_salary_for_employee()
+        elif choice == "13":
+            system.edit_employee()
+        elif choice == "14":
+            system.edit_department()
         elif choice == "0":
             print("Goodbye")
             break
